@@ -1,0 +1,54 @@
+.magic-line-navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+    position: relative;
+    justify-content: space-around;
+    animation: fadeIn 3s ease;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease-out;
+}
+
+.nav-link:hover {
+    color: #cdcdcd;
+}
+.magic-line-navbar a.active{
+    color:Red;
+}
+
+.nav-link:hover::after {
+    transform: translateX(0);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        filter: blur(20px);
+    }
+
+    10%{
+        opacity: 1;
+        filter: brightness(2) blur(10px);
+    }
+
+}
