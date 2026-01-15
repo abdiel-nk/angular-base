@@ -8,7 +8,7 @@ import { Character } from "../../interfaces/character.interface";
 
 export class AddCharacterComponent{
     name = signal('')
-    power = signal(40)
+    power = signal(0)
 
     newCharacter= output<Character>();
 
